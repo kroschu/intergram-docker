@@ -1,6 +1,6 @@
-FROM node:alpine
+FROM arm64v8/node:alpine
 
-MAINTAINER Maik Herrmann <maik.herrmann@main-method.com>
+MAINTAINER Volodymyr Kovalenko <trebatak@hotmail.com>
 
 RUN apk update && apk upgrade && \
     apk add --no-cache git curl
@@ -10,7 +10,7 @@ ENV PORT=3000
 RUN mkdir -p $HOME
 WORKDIR $HOME
 
-RUN git clone https://github.com/idoco/intergram.git ${HOME}
+RUN git clone https://github.com/kroschu/intergram.git ${HOME}
 
 RUN apk del git
 
