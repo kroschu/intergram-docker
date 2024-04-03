@@ -1,4 +1,4 @@
-FROM arm64v8/node:alpine
+FROM node:alpine
 
 MAINTAINER Volodymyr Kovalenko <trebatak@hotmail.com>
 
