@@ -14,7 +14,7 @@ RUN git clone https://github.com/kroschu/intergram.git ${HOME}
 
 RUN apk del git
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 RUN npm run build
 
 HEALTHCHECK CMD curl --fail http://localhost:${PORT} || exit 1
